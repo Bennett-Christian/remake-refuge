@@ -144,6 +144,76 @@ footer a:hover {
 }
 
 .hero-slider {
+    display: flex;
+    margin-top: 0.625rem;
+    width: 63.4375rem;
+    height: 43.75rem;
+    background-color: transparent;
+}
+
+input[type="range"] {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: inherit;
+    padding: 0px;
+    margin-top: 22.5rem;
+    z-index: 100;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: grab;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: -0.625rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.hero-slider-foreground {
+    position: absolute;
+    width: 50rem;
+    height: inherit;
+    padding: 0;
+    margin-left: 0.5313rem;
+    z-index: 10;
+    box-shadow: 0.3125rem 0 0.5625rem 0.0625rem #fffefe11;
+    border-right: solid 0.5px rgba(255, 255, 255, 0.425);
+    background-image: url("../media/links_awakening_cello_remake.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-slider-background {
+    position: absolute;
+    width: 50rem;
+    height: inherit;
+    margin-left: 0.5313rem;
+    background-image: url("../media/links_awakening_cello_original.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .hero-slider {
+    position: relative;
+    height: 37.5rem;
+}
+
+.hero-slider-background {
+    position: absolute;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+.hero-slider-background img {
+    display: block;
+} */
+
+/* .hero-slider {
     position: relative;
     width: 56.25rem;
     height: 37.5rem;
@@ -195,7 +265,7 @@ footer a:hover {
     height: 600px;
     background: white;
     cursor: pointer;
-}
+} */
 
 .central {
     display: flex;
