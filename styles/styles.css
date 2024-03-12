@@ -109,6 +109,19 @@ footer a:hover,
     color: #405c81;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../media/crash_resident_awakening_remake_banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+}
+
 .central {
     display: flex;
     flex-direction: column;
