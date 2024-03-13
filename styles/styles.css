@@ -12,11 +12,11 @@ header {
 }
 
 .navbar a {
-    color: #597fad;
+    color: #FF7733;
 }
 
 .navbar a:hover {
-    color: #405c81;
+    color: #F85A3E;
 }
 
 .navbar-content {
@@ -29,7 +29,7 @@ header {
     width: 100%;
     height: 10vh;
     font-size: 1.6rem;
-    background-color: #2a3e56;
+    background-color: #6E3739;
 }
 
 .navbar-right {
@@ -47,12 +47,12 @@ main {
 
 body {
     height: 100%;
-    background-color: #05080c;
+    background-color: #092327;
 }
 
 p {
     font-size: 1.1rem;
-    color: #4b6d97;
+    color: #9DA9A0;
 }
 
 a {
@@ -61,7 +61,7 @@ a {
 
 h1,
 h2 {
-    color: #405c81;
+    color: #9DA9A0;
 }
 
 h2 {
@@ -82,25 +82,25 @@ footer {
     width: 100%;
     bottom: 0;
     left: 0;
-    padding: 0;
-    background-color: #1f2f42;
+    padding: 0.5rem 0;
+    background-color: #6E3739;
 }
 
 footer p {
     padding-top: 0.2rem;
-    color: #4b6d97;
+    color: #9DA9A0;
 }
 
 footer a:link {
-    color: #597fad;
+    color: #FF7733;
 }
 
 footer a:visited {
-    color: #597fad;
+    color: #FF7733;
 }
 
 footer a:hover {
-    color: #405c81;
+    color: #F85A3E;
 }
 
 .hero {
@@ -119,28 +119,29 @@ footer a:hover {
 .hero-title {
     text-align: center;
     font-size: 4rem;
-    color: #d65353;
+    color: #FF7733;
+    background-color: #6e373948;
 }
 
 .hero-button {
     font-size: 1.5rem;
     height: 2.9rem;
     padding: 0 0.9rem;
-    border: 1px solid #46494C;
+    border: 1px solid #092327;
     border-radius: 0.625rem;
-    color: #C5C3C6;
-    background-color: #1985A1;
+    color: #9DA9A0;
+    background-color: #6E3739;
 }
 
 .hero-button:hover {
-    color: #D59C7D;
-    background-color: #11586A;
+    color: #242524;
+    background-color: #a63622;
     cursor: pointer;
 }
 
 .hero-button:active {
-    color: #A7816C;
-    background-color: #246A11;
+    color: #9DA9A0;
+    background-color: #092327;
 }
 
 .hero-slider {
@@ -207,80 +208,14 @@ input[type="range"]::-webkit-slider-thumb:active {
     background-repeat: no-repeat;
 }
 
-/* .hero-slider {
-    position: relative;
-    height: 37.5rem;
-}
-
-.hero-slider-background {
-    position: absolute;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-}
-
-.hero-slider-background img {
-    display: block;
-} */
-
-/* .hero-slider {
-    position: relative;
-    width: 56.25rem;
-    height: 37.5rem;
-    border: 2px solid white;
-}
-
-.hero-slider-background,
-.hero-slider-foreground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 900px 100%;
-}
-
-.hero-slider-background {
-    background-image: url(../media/links_awakening_cello_remake.jpg);
-}
-
-.hero-slider-foreground {
-    background-image: url(../media/links_awakening_cello_original.jpg);
-    width: 50%;
-}
-
-.slider {
-    position: absolute;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 100%;
-    background: rgba(242, 242, 242, .3);
-    outline: none;
-    margin: 0;
-    transition: all 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider:hover {
-    background: rgba(242, 242, 242, .1);
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 6px;
-    height: 600px;
-    background: white;
-    cursor: pointer;
-} */
-
 .central {
     display: flex;
     flex-direction: column;
     margin: 1rem 5rem;
+}
+
+.central-text {
+    margin: 1.2rem 0;
 }
 
 .central-image {
