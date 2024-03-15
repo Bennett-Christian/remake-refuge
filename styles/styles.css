@@ -92,8 +92,10 @@ footer p {
     color: #9DA9A0;
 }
 
-footer a:link {
+footer a:link,
+footer a {
     color: #FF7733;
+    cursor: pointer;
 }
 
 footer a:visited {

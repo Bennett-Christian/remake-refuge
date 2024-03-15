@@ -1,11 +1,20 @@
 // The new concept I pursued was to create a comparison image slider to simultaneously show two images that occupy the same space. The slider changes the width of the image containers to show a percent of the images to match the slider's value
 
-const scrollButton = document.querySelector(".hero-button");
+const scrollDown = document.querySelector(".hero-button");
 const scrollTitle = document.getElementById("scroll-title");
-if (scrollButton) {
-    scrollButton.addEventListener("click", () => {
+if (scrollDown) {
+    scrollDown.addEventListener("click", () => {
         scrollTitle.scrollIntoView();
-        console.log("Scrolling downwards")
+        console.log("Scrolling downwards");
+    });
+}
+
+const scrollUp = document.querySelector(".scroll-top");
+const scrollTop = document.getElementById("scroll-top");
+if (scrollUp) {
+    scrollUp.addEventListener("click", () => {
+        scrollTop.scrollIntoView();
+        console.log("Scrolling upwards");
     });
 }
 
@@ -26,7 +35,6 @@ if (slider) {
 }
 
 const carousel = document.querySelector(".central-carousel-container");
-console.log(carousel);
 if (carousel) {
     const carouselFirst = document.querySelector(".central-carousel-first");
     const carouselSecond = document.querySelector(".central-carousel-second");
