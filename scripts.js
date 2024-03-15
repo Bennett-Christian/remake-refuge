@@ -68,7 +68,6 @@ if (carousel) {
 
 const subscribeForm = document.getElementById("subscribe-form");
 function pollResultsRequest(vote) {
-    // in real life, this could contact an API to handle this
     const results = {
         "The Legend of Zelda: Link's Awakening": 281,
         "Final Fantasy VII": 344,
@@ -78,7 +77,7 @@ function pollResultsRequest(vote) {
     };
     let keys = Object.keys(results);
     if (!keys.includes(vote)) {
-        return results; // this might normally raise an error, but just returns results unchanged
+        return results;
     }
     results[vote] += 1;
     return results;
