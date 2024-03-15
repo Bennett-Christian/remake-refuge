@@ -25,12 +25,13 @@ if (slider) {
     });
 }
 
-const carousel = document.querySelectorAll(".central-carousel-container");
+const carousel = document.querySelector(".central-carousel-container");
+console.log(carousel);
 if (carousel) {
-    const carouselFirst = document.querySelectorAll(".central-carousel-first");
-    const carouselSecond = document.querySelectorAll(".central-carousel-second");
-    const displayButtonFirst = document.querySelectorAll(".central-display-button-first");
-    const displayButtonSecond = document.querySelectorAll(".central-display-button-second");
+    const carouselFirst = document.querySelector(".central-carousel-first");
+    const carouselSecond = document.querySelector(".central-carousel-second");
+    const displayButtonFirst = document.querySelector(".central-display-button-first");
+    const displayButtonSecond = document.querySelector(".central-display-button-second");
     displayButtonFirst.addEventListener("click", () => {
         carouselSecond.style.display = "none";
         carouselFirst.style.display = "block";
