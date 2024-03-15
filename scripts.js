@@ -1,4 +1,4 @@
-// The slider changes the width of the image containers to show a percent of the images that matches the slider
+// The new concept I pursued was to create a comparison image slider to show two images that occupy the same space. The slider changes the width of the image containers to show a percent of the images to match the slider's value
 
 const slider = document.querySelector("input[type='range']");
 const sliderContainer = document.querySelector(".hero-slider-container")
@@ -13,6 +13,7 @@ if (slider) {
         const widthLeftPct = e.target.value;
         const widthRightPct = 100 - widthLeftPct;
         imageRight.style.left = (widthLeftPct / widthRightPct * -100) + "%";
+        console.log("Slider value changed, image adjusted");
     });
 }
 
@@ -21,6 +22,7 @@ const scrollTitle = document.getElementById("scroll-title");
 if (scrollButton) {
     scrollButton.addEventListener("click", () => {
         scrollTitle.scrollIntoView();
+        console.log("Scrolling downwards")
     });
 }
 
@@ -45,12 +47,13 @@ if (subscribeForm) {
         e.preventDefault();
         while (true) {
             let answer = prompt("To prove you are a human, answer 3 + 14:");
-            console.log(answer);
             if (answer === null) {
+                console.log("Cancelled");
                 return;
             }
             answer = parseInt(answer);
             if (answer === (3 + 14)) {
+                console.log("Verified as human, showing poll results:");
                 break;
             }
         }
@@ -61,10 +64,11 @@ if (subscribeForm) {
         const vote = gameDropdown.value;
         const pollResults = pollResultsRequest(vote);
         const keys = Object.keys(pollResults);
-        console.log(keys);
+        const values = Object.values(pollResults);
         for (i = 0; i < keys.length; i++) {
             const key = keys[i];
-            console.log(key);
+            const value = values[i];
+            console.log(key, value);
             const wrapperDiv = document.createElement("div");
             const gameNameSpan = document.createElement("span");
             gameNameSpan.innerText = key + ": ";
