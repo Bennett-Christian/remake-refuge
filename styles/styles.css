@@ -210,6 +210,10 @@ footer a:hover {
     width: fit-content;
 }
 
+.central-carousel-second {
+    display: none;
+}
+
 form {
     display: flex;
     flex-direction: column;

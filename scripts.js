@@ -1,10 +1,18 @@
 // The new concept I pursued was to create a comparison image slider to show two images that occupy the same space. The slider changes the width of the image containers to show a percent of the images to match the slider's value
 
+const scrollButton = document.querySelector(".hero-button");
+const scrollTitle = document.getElementById("scroll-title");
+if (scrollButton) {
+    scrollButton.addEventListener("click", () => {
+        scrollTitle.scrollIntoView();
+        console.log("Scrolling downwards")
+    });
+}
+
 const slider = document.querySelector("input[type='range']");
 const sliderContainer = document.querySelector(".hero-slider-container")
 const sliderLeft = document.querySelector(".hero-slider-left");
 const sliderRight = document.querySelector(".hero-slider-right");
-
 if (slider) {
     slider.addEventListener("input", e => {
         sliderLeft.style.flexBasis = e.target.value + "%";
@@ -17,12 +25,21 @@ if (slider) {
     });
 }
 
-const scrollButton = document.querySelector(".hero-button");
-const scrollTitle = document.getElementById("scroll-title");
-if (scrollButton) {
-    scrollButton.addEventListener("click", () => {
-        scrollTitle.scrollIntoView();
-        console.log("Scrolling downwards")
+const carousel = document.querySelector(".central-carousel-container");
+const carouselFirst = document.querySelector(".central-carousel-first");
+const carouselSecond = document.querySelector(".central-carousel-second");
+const displayButtonFirst = document.querySelector(".central-display-button-first");
+const displayButtonSecond = document.querySelector(".central-display-button-second");
+if (carousel) {
+    displayButtonFirst.addEventListener("click", () => {
+        carouselSecond.style.display = "none";
+        carouselFirst.style.display = "block";
+        console.log("Hiding second carousel image, showing first carousel image");
+    });
+    displayButtonSecond.addEventListener("click", () => {
+        carouselFirst.style.display = "none";
+        carouselSecond.style.display = "block";
+        console.log("Hiding first carousel image, showing second carousel image");
     });
 }
 
