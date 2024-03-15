@@ -8,7 +8,8 @@
 
 header {
     position: sticky;
-    top: 0;
+    top: -1px;
+    z-index: 3;
 }
 
 .navbar a {
@@ -144,68 +145,31 @@ footer a:hover {
     background-color: #092327;
 }
 
-.hero-slider {
+#scroll-title {
+    position: relative;
+    top: 1px;
+}
+
+.hero-slider-container {
     display: flex;
-    margin-top: 0.625rem;
-    width: 63.4375rem;
-    max-width: 100%;
-    height: 43.75rem;
-    background-color: transparent;
+    width: 80vw;
+    height: calc(80vw * 9/16);
 }
 
-input[type="range"] {
-    position: absolute;
-    -webkit-appearance: none;
-    appearance: none;
-    width: inherit;
-    max-width: 100%;
-    padding: 0px;
-    margin-top: 22.5rem;
-    z-index: 100;
-    background: transparent;
+.hero-slider-container > div {
+    overflow: hidden;
+    flex-basis: 50%;
+    height: 100%;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    cursor: grab;
-    width: 1.1rem;
-    max-width: 100%;
-    height: 1.1rem;
-    margin-top: -0.625rem;
-    border-radius: 50%;
-    background-color: white;
+.hero-slider-container div img {
+    width: auto;
+    height: 100%;
 }
 
-input[type="range"]::-webkit-slider-thumb:active {
-    background-color: rgb(231, 227, 227);
-    cursor: grabbing;
-}
-
-.hero-slider-foreground {
-    position: absolute;
-    width: 50rem;
-    max-width: 100%;
-    height: inherit;
-    padding: 0;
-    margin-left: 0.5313rem;
-    z-index: 10;
-    box-shadow: 0.3125rem 0 0.5625rem 0.0625rem #fffefe11;
-    border-right: solid 0.0313rem rgba(255, 255, 255, 0.425);
-    background-image: url("../media/links_awakening_cello_remake.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.hero-slider-background {
-    position: absolute;
-    width: 50rem;
-    max-width: 100%;
-    height: inherit;
-    margin-left: 0.5313rem;
-    background-image: url("../media/links_awakening_cello_original.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.hero-slider-right img {
+    position: relative;
+    left: -100%;
 }
 
 .central {
@@ -227,4 +191,33 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 .central-button {
     width: fit-content;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 2em;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #9DA9A0;
+}
+
+form button {
+    font-size: 1.5rem;
+    height: auto;
+    padding: 0 0.3rem 0.3rem 0.3rem;
+    margin-top: 1.5rem;
+    border: 1px solid #092327;
+    border-radius: 0.625rem;
+    color: #9DA9A0;
+    background-color: #6E3739;
+}
+
+form button:hover {
+    color: #242524;
+    background-color: #a63622;
+    cursor: pointer;
 }
