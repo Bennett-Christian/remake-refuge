@@ -70,11 +70,11 @@ const subscribeForm = document.getElementById("subscribe-form");
 function pollResultsRequest(vote) {
     // in real life, this could contact an API to handle this
     const results = {
-        "The Legend of Zelda: Link's Awakening": 28,
-        "Final Fantasy VII": 39,
-        "Secret of Mana": 39,
-        "Demon's Souls": 36,
-        "Shadow of the Colossus": 32
+        "The Legend of Zelda: Link's Awakening": 281,
+        "Final Fantasy VII": 344,
+        "Secret of Mana": 95,
+        "Demon's Souls": 344,
+        "Shadow of the Colossus": 279
     };
     let keys = Object.keys(results);
     if (!keys.includes(vote)) {
