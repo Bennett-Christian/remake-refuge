@@ -46,7 +46,8 @@ if (subscribeForm) {
         e.preventDefault();
         while (true) {
             let answer = parseInt(prompt("To prove you are a human, answer 3 + 14:"));
-            if (answer === null) {
+            console.log(answer);
+            if (answer === null || answer === NaN) {
                 return;
             }
             if (answer === (3 + 14)) {
