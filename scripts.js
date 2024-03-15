@@ -28,7 +28,7 @@ if (scrollButton) {
 
 const subscribeForm = document.getElementById("subscribe-form");
 function pollResultsRequest(vote) {
-    // in real life, this would contact an API to handle this
+    // in real life, this could contact an API to handle this
     const results = {
         "Secret of Mana": 1,
         "Final Fantasy VII": 4,
