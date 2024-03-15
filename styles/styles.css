@@ -201,9 +201,8 @@ footer a:hover {
 
 .central-image {
     height: 31.25rem;
-    width: 31.25rem;
+    width: 50rem;
     max-width: 100%;
-    border: 1px solid red;
 }
 
 .central-button {
@@ -212,6 +211,35 @@ footer a:hover {
 
 .central-carousel-second {
     display: none;
+}
+
+.central-carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.central-carousel-container button {
+    width: fit-content;
+    height: auto;
+    font-size: 1.5rem;
+    padding: 0 0.3rem 0.3rem 0.3rem;
+    margin-top: 1.5rem;
+    border: 1px solid #092327;
+    border-radius: 0.625rem;
+    color: #FF7733;
+    background-color: #6E3739;
+}
+
+.central-carousel-container button:hover {
+    color: #7a847c;
+    background-color: #a63622;
+    cursor: pointer;
+}
+
+.central-carousel-container button:active {
+    color: #FF7733;
+    background-color: #9e4a20;
 }
 
 form {
