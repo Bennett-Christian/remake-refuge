@@ -30,8 +30,12 @@ console.log(carousel);
 if (carousel) {
     const carouselFirst = document.querySelector(".central-carousel-first");
     const carouselSecond = document.querySelector(".central-carousel-second");
+    const carouselThird = document.querySelector(".central-carousel-third");
+    const carouselFourth = document.querySelector(".central-carousel-fourth");
     const displayButtonFirst = document.querySelector(".central-display-button-first");
     const displayButtonSecond = document.querySelector(".central-display-button-second");
+    const displayButtonThird = document.querySelector(".central-display-button-third");
+    const displayButtonFourth = document.querySelector(".central-display-button-fourth");
     displayButtonFirst.addEventListener("click", () => {
         carouselSecond.style.display = "none";
         carouselFirst.style.display = "block";
@@ -41,6 +45,16 @@ if (carousel) {
         carouselFirst.style.display = "none";
         carouselSecond.style.display = "block";
         console.log("Hiding first carousel image, showing second carousel image");
+    });
+    displayButtonThird.addEventListener("click", () => {
+        carouselFourth.style.display = "none";
+        carouselThird.style.display = "block";
+        console.log("Hiding fourth carousel image, showing third carousel image");
+    });
+    displayButtonFourth.addEventListener("click", () => {
+        carouselFourth.style.display = "block";
+        carouselThird.style.display = "none";
+        console.log("Hiding third carousel image, showing fourth carousel image");
     });
 }
 

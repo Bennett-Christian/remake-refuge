@@ -209,7 +209,8 @@ footer a:hover {
     width: fit-content;
 }
 
-.central-carousel-second {
+.central-carousel-second,
+.central-carousel-fourth {
     display: none;
 }
 
