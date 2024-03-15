@@ -19,10 +19,9 @@ if (slider) {
 const scrollButton = document.querySelector(".hero-button");
 const scrollTitle = document.getElementById("scroll-title");
 if (scrollButton) {
-    scrollButton.addEventListener("click", scrollDown); // TODO: anonymous
-}
-function scrollDown() {
-    scrollTitle.scrollIntoView();
+    scrollButton.addEventListener("click", () => {
+        scrollTitle.scrollIntoView();
+    });
 }
 
 const subscribeForm = document.getElementById("subscribe-form");
@@ -45,24 +44,39 @@ if (subscribeForm) {
     subscribeForm.addEventListener("submit", e => {
         e.preventDefault();
         while (true) {
-            let answer = parseInt(prompt("To prove you are a human, answer 3 + 14:"));
+            let answer = prompt("To prove you are a human, answer 3 + 14:");
             console.log(answer);
-            if (answer === null || answer === NaN) {
+            if (answer === null) {
                 return;
             }
+            answer = parseInt(answer);
             if (answer === (3 + 14)) {
                 break;
             }
         }
+        const gameDropdown = document.getElementById("game");
         const resultsDiv = document.createElement("div");
-        resultsDiv.textContent = "Secret of Mana: 1";
-        console.log(document.getElementById("game"));
+        resultsDiv.id = "poll-results";
+        resultsDiv.innerText = "The current poll results are as follows:";
+        const vote = gameDropdown.value;
+        const pollResults = pollResultsRequest(vote);
+        const keys = Object.keys(pollResults);
+        console.log(keys);
+        for (i = 0; i < keys.length; i++) {
+            const key = keys[i];
+            console.log(key);
+            const wrapperDiv = document.createElement("div");
+            const gameNameSpan = document.createElement("span");
+            gameNameSpan.innerText = key + ": ";
+            const gameVotesSpan = document.createElement("span");
+            gameVotesSpan.innerText = pollResults[key];
+            wrapperDiv.append(gameNameSpan, gameVotesSpan);
+            resultsDiv.append(wrapperDiv);
+        }
+        subscribeForm.replaceWith(resultsDiv);
+        const pollText = document.getElementById("central-poll-text");
+        const dotIndex = pollText.innerText.indexOf(".");
+        const newPollText = pollText.innerText.slice(0, dotIndex + 1);
+        pollText.innerText = newPollText;
     });
 }
-
-
-// TODO: if, else if, else, errors
-// TODO: loop
-// TODO: prompt
-// TODO: array & string methods
-// TODO: objects

@@ -221,3 +221,8 @@ form button:hover {
     background-color: #a63622;
     cursor: pointer;
 }
+
+#poll-results {
+    font-size: 1.1rem;
+    color: #9DA9A0;
+}
